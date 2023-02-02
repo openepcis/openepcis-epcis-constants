@@ -1,10 +1,15 @@
-package io.openepcis.constant;
+package io.openepcis.constants;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class EPCISInfo {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class EPCIS {
+
+  // GS1 domain information
+  public static final String GS1_IDENTIFIER_DOMAIN = "https://id.gs1.org";
+  public static final String GS1_CBV_DOMAIN = "https://ref.gs1.org/cbv/";
+  public static final String GS1_VOC_DOMAIN = "https://gs1.org/voc/";
 
   // Basic event info
   public static final String TYPE = "type";
@@ -105,15 +110,20 @@ public class EPCISInfo {
 
   // Other GS1 specific info
   public static final String CONTEXT = "@context";
+  public static final String URN = "urn";
+  public static final String WEBURI = "WebURI";
 
+  // GS1 specific info
   public static final String CBV_MDA = "cbvmda";
   public static final String CBV_MDA_URL = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_DOCUMENT = "EPCISDocument";
   public static final String EPCIS_DOCUMENT_WITH_NAMESPACE = "epcis:EPCISDocument";
   public static final String EPCIS_BODY = "EPCISBody";
-  public static final String EPCIS_EVENTS_LIST = "EventList";
+  public static final String EVENTS_LIST = "EventList";
   public static final String PATH_DELIMITER = "/";
-  public static final String GS1_FORMATTED_VALUE = "gs1:";
+  public static final String GS1_PREFIX = "gs1:";
+
+  // GS1 URN vocabulary prefix
   public static final String INSTANCE_IDENTIFIER_URN_PREFIX = "urn:epc:id:";
   public static final String CLASS_IDENTIFIER_URN_PREFIX_WITH_CLASS = "urn:epc:class:";
   public static final String CLASS_IDENTIFIER_URN_PREFIX_WITH_IDPAT = "urn:epc:idpat:";
@@ -124,4 +134,24 @@ public class EPCISInfo {
   public static final String BIZ_TRANSACTION_EPC_URN_PREFIX = "urn:epcglobal:cbv:btt:";
   public static final String SOURCE_DESTINATION_EPC_URN_PREFIX = "urn:epcglobal:cbv:sdt:";
   public static final String ERROR_REASON_EPC_URN_PREFIX = "urn:epcglobal:cbv:er:";
+
+  // GS1 Curie vocabulary prefix
+  private static final String BIZ_STEP_CURIE_PREFIX = "cbv:BizStep-";
+  private static final String DISPOSITION_CURIE_PREFIX = "cbv:Disp-";
+  private static final String BIZ_TRANSACTION_CURIE_PREFIX = "cbv:BTT-";
+  private static final String SRC_DEST_CURIE_PREFIX = "cbv:SDT-";
+  private static final String ERR_REASON_CURIE_PREFIX = "cbv:ER-";
+
+  // GS1 WebURI/DigitalLink vocabulary prefix
+  private static final String BIZ_STEP_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "BizStep-";
+  private static final String DISPOSITION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "Disp-";
+  private static final String BIZ_TRANSACTION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "BTT-";
+  private static final String SRC_DEST_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "SDT-";
+  private static final String ERR_REASON_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "ER-";
+
+  private static final String BIZ_STEP_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "BizStep-";
+  private static final String DISPOSITION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "Disp-";
+  private static final String BIZ_TRANSACTION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "BTT-";
+  private static final String SRC_DEST_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "SDT-";
+  private static final String ERR_REASON_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "ER-";
 }
