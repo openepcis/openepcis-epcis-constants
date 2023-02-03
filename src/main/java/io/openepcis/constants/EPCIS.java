@@ -20,6 +20,13 @@ public class EPCIS {
   public static final String TRANSACTION_EVENT = "TransactionEvent";
   public static final String TRANSFORMATION_EVENT = "TransformationEvent";
   public static final String ASSOCIATION_EVENT = "AssociationEvent";
+  public static final List<String> EPCIS_EVENT_TYPES =
+      List.of(
+          OBJECT_EVENT,
+          AGGREGATION_EVENT,
+          TRANSACTION_EVENT,
+          TRANSFORMATION_EVENT,
+          ASSOCIATION_EVENT);
 
   // WHAT dimension info
   public static final String PARENT_ID = "parentID";
@@ -59,7 +66,6 @@ public class EPCIS {
   public static final String PERSISTENT_DISPOSITION = "persistentDisposition";
   public static final String SET = "set";
   public static final String UNSET = "unset";
-  public static final String ILMD = "ilmd";
   public static final String EXTENSION = "extension";
   public static final String BASE_EXTENSION = "baseExtension";
 
@@ -109,6 +115,7 @@ public class EPCIS {
   public static final String CERTIFICATION_INFO = "certificationInfo";
   public static final String ACTION = "action";
   public static final String TRANSFORMATION_ID = "transformationID";
+  public static final String ILMD = "ilmd";
 
   // Other GS1 specific info
   public static final String URN = "urn";
@@ -122,63 +129,67 @@ public class EPCIS {
 
   // GS1 specific info
   public static final String CONTEXT = "@context";
-  public static final String GS1_PREFIX = "gs1:";
-  public static final String CBV_MDA = "cbvmda";
-  public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_DOCUMENT = "EPCISDocument";
   public static final String EPCIS_DOCUMENT_WITH_NAMESPACE = "epcis:EPCISDocument";
   public static final String EPCIS_BODY = "EPCISBody";
   public static final String EVENTS_LIST = "EventList";
+  public static final String GS1_PREFIX = "gs1:";
   public static final String EPCIS_LOCALNAME = "epcis:";
+  public static final String CBV_MDA = "cbvmda";
+  public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
 
   // GS1 URN vocabulary prefix
-  public static final String DEFAULT_IDENTIFIER_PREFIX = "urn:epc:";
-  public static final String INSTANCE_IDENTIFIER_URN_PREFIX = DEFAULT_IDENTIFIER_PREFIX + "id:";
+  public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
+  public static final String INSTANCE_IDENTIFIER_URN_PREFIX = DEFAULT_IDENTIFIER_URN_PREFIX + "id:";
   public static final String CLASS_IDENTIFIER_URN_PREFIX_WITH_CLASS =
-      DEFAULT_IDENTIFIER_PREFIX + "class:";
+      DEFAULT_IDENTIFIER_URN_PREFIX + "class:";
   public static final String CLASS_IDENTIFIER_URN_PREFIX_WITH_IDPAT =
-      DEFAULT_IDENTIFIER_PREFIX + "idpat:";
+      DEFAULT_IDENTIFIER_URN_PREFIX + "idpat:";
   public static final String PARTY_GLN_IDENTIFIER_URN_PREFIX =
-      DEFAULT_IDENTIFIER_PREFIX + "id:pgln:";
+      DEFAULT_IDENTIFIER_URN_PREFIX + "id:pgln:";
   public static final String SERIALIZED_GLN_IDENTIFIER_URN_PREFIX =
-      DEFAULT_IDENTIFIER_PREFIX + "id:sgln:";
+      DEFAULT_IDENTIFIER_URN_PREFIX + "id:sgln:";
 
-  public static final String DEFAULT_URN_PREFIX = "urn:epcglobal:cbv:";
-  public static final String BIZ_STEP_URN_PREFIX = DEFAULT_URN_PREFIX + "bizstep:";
-  public static final String DISPOSITION_URN_PREFIX = DEFAULT_URN_PREFIX + "disp:";
-  public static final String BIZ_TRANSACTION_URN_PREFIX = DEFAULT_URN_PREFIX + "btt:";
-  public static final String SOURCE_DESTINATION_URN_PREFIX = DEFAULT_URN_PREFIX + "sdt:";
-  public static final String ERROR_REASON_URN_PREFIX = DEFAULT_URN_PREFIX + "er:";
+  public static final String BIZ_STEP_WEBURI_PREFIX = "BizStep-";
+  public static final String DISP_WEBURI_PREFIX = "Disp-";
+  public static final String BIZ_TRANSACTION_WEBURI_PREFIX = "BTT-";
+  public static final String SOURCE_DESTINATION_WEBURI_PREFIX = "SDT-";
+  public static final String ERROR_REASON_WEBURI_PREFIX = "BTT-";
+
+  public static final String DEFAULT_VOCABULARY_URN_PREFIX = "urn:epcglobal:cbv:";
+  public static final String BIZ_STEP_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "bizstep:";
+  public static final String DISPOSITION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "disp:";
+  public static final String BIZ_TRANSACTION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "btt:";
+  public static final String SOURCE_DESTINATION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "sdt:";
+  public static final String ERROR_REASON_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "er:";
 
   // GS1 Curie vocabulary prefix
   public static final String DEFAULT_CURIE_PREFIX = "cbv:";
-  private static final String BIZ_STEP_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "BizStep-";
-  private static final String DISPOSITION_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "Disp-";
-  private static final String BIZ_TRANSACTION_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "BTT-";
+  private static final String BIZ_STEP_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + BIZ_STEP_WEBURI_PREFIX;
+  private static final String DISPOSITION_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + DISP_WEBURI_PREFIX;
+  private static final String BIZ_TRANSACTION_CURIE_PREFIX =
+      DEFAULT_CURIE_PREFIX + BIZ_TRANSACTION_WEBURI_PREFIX;
   private static final String SRC_DEST_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "SDT-";
   private static final String ERR_REASON_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "ER-";
 
   // GS1 WebURI/DigitalLink vocabulary prefix
-  private static final String BIZ_STEP_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "BizStep-";
-  private static final String DISPOSITION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "Disp-";
-  private static final String BIZ_TRANSACTION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "BTT-";
-  private static final String SRC_DEST_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "SDT-";
-  private static final String ERR_REASON_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + "ER-";
+  private static final String BIZ_STEP_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
+  private static final String DISPOSITION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + DISP_WEBURI_PREFIX;
+  private static final String BIZ_TRANSACTION_WEBURI_CBV_PREFIX =
+      GS1_CBV_DOMAIN + BIZ_TRANSACTION_WEBURI_PREFIX;
+  private static final String SRC_DEST_WEBURI_CBV_PREFIX =
+      GS1_CBV_DOMAIN + SOURCE_DESTINATION_WEBURI_PREFIX;
+  private static final String ERR_REASON_WEBURI_CBV_PREFIX =
+      GS1_CBV_DOMAIN + ERROR_REASON_WEBURI_PREFIX;
 
-  private static final String BIZ_STEP_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "BizStep-";
-  private static final String DISPOSITION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "Disp-";
-  private static final String BIZ_TRANSACTION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "BTT-";
-  private static final String SRC_DEST_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "SDT-";
-  private static final String ERR_REASON_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + "ER-";
-
-  // EPCIS related items list
-  public static final List<String> EPCIS_EVENT_TYPES =
-      List.of(
-          OBJECT_EVENT,
-          AGGREGATION_EVENT,
-          TRANSACTION_EVENT,
-          TRANSFORMATION_EVENT,
-          ASSOCIATION_EVENT);
+  private static final String BIZ_STEP_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
+  private static final String DISPOSITION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + DISP_WEBURI_PREFIX;
+  private static final String BIZ_TRANSACTION_WEBURI_VOC_PREFIX =
+      GS1_VOC_DOMAIN + BIZ_TRANSACTION_WEBURI_PREFIX;
+  private static final String SRC_DEST_WEBURI_VOC_PREFIX =
+      GS1_VOC_DOMAIN + SOURCE_DESTINATION_WEBURI_PREFIX;
+  private static final String ERR_REASON_WEBURI_VOC_PREFIX =
+      GS1_VOC_DOMAIN + ERROR_REASON_WEBURI_PREFIX;
 }
