@@ -111,11 +111,17 @@ public class EPCIS {
   public static final String TRANSFORMATION_ID = "transformationID";
 
   // Other GS1 specific info
-  public static final String CONTEXT = "@context";
   public static final String URN = "urn";
   public static final String WEBURI = "WebURI";
+  public static final String PATH_DELIMITER = "/";
+  public static final String SCHEMA_VERSION_1_2 = "1.2";
+  public static final String SCHEMA_VERSION_2_0 = "2.0";
+  public static final String CAPTURE = "capture";
+  public static final String QUERY = "query";
+  public static final String EPCIS_QUERY_DOCUMENT = "EPCISQueryDocument";
 
   // GS1 specific info
+  public static final String CONTEXT = "@context";
   public static final String GS1_PREFIX = "gs1:";
   public static final String CBV_MDA = "cbvmda";
   public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
@@ -124,9 +130,6 @@ public class EPCIS {
   public static final String EPCIS_BODY = "EPCISBody";
   public static final String EVENTS_LIST = "EventList";
   public static final String EPCIS_LOCALNAME = "epcis:";
-  public static final String PATH_DELIMITER = "/";
-  public static final String SCHEMA_VERSION_1_2 = "1.2";
-  public static final String SCHEMA_VERSION_2_0 = "2.0";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
 
