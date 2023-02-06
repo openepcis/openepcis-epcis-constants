@@ -129,6 +129,8 @@ public class EPCIS {
 
   // GS1 specific info
   public static final String CONTEXT = "@context";
+  public static final String DEFAULT_CONTEXT =
+      "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld";
   public static final String EPCIS_DOCUMENT = "EPCISDocument";
   public static final String EPCIS_DOCUMENT_WITH_NAMESPACE = "epcis:EPCISDocument";
   public static final String EPCIS_BODY = "EPCISBody";
@@ -139,6 +141,12 @@ public class EPCIS {
   public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
+  public static final String XML_FORMAT = "xml";
+  public static final String JSON_FORMAT = "json";
+  public static final String JSON_LD_FORMAT = "json-ld";
+  public static final String APPLICATION_XML = "application/xml";
+  public static final String APPLICATION_JSON = "application/json";
+  public static final String APPLICATION_JSON_LD = "application/ld+json";
 
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
