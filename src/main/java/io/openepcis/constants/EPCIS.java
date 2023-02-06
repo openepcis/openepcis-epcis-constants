@@ -141,12 +141,16 @@ public class EPCIS {
   public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
+  public static final String SCHEMA_VERSION = "schemaVersion";
   public static final String XML_FORMAT = "xml";
   public static final String JSON_FORMAT = "json";
   public static final String JSON_LD_FORMAT = "json-ld";
   public static final String APPLICATION_XML = "application/xml";
   public static final String APPLICATION_JSON = "application/json";
   public static final String APPLICATION_JSON_LD = "application/ld+json";
+  public static final String EXCEPTION_MESSAGE = "\nException : ";
+  public static final List<String> EPCIS_HEADER_ELEMENTS =
+      List.of(EPCIS_DOCUMENT, EPCIS_BODY, EVENTS_LIST);
 
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
@@ -200,4 +204,209 @@ public class EPCIS {
       GS1_VOC_DOMAIN + SOURCE_DESTINATION_WEBURI_PREFIX;
   private static final String ERR_REASON_WEBURI_VOC_PREFIX =
       GS1_VOC_DOMAIN + ERROR_REASON_WEBURI_PREFIX;
+
+  // Start of elements and their order in 1.2 XML document
+  public static final List<String> ALL_EPCIS_ELEMENTS_1_2 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          PARENT_ID,
+          EPC_LIST,
+          CHILD_EPCS,
+          INPUT_EPC_LIST,
+          INPUT_QUANTITY_LIST,
+          OUTPUT_EPC_LIST,
+          OUTPUT_QUANTITY_LIST,
+          TRANSFORMATION_ID,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          QUANTITY_LIST,
+          CHILD_QUANTITY_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          ILMD,
+          SENSOR_ELEMENT_LIST,
+          PERSISTENT_DISPOSITION,
+          CERTIFICATION_INFO);
+
+  public static final List<String> EPCIS_EVENT_TYPE =
+      List.of(EVENT_TIME, RECORD_TIME, EVENT_TIME_ZONE_OFFSET);
+  public static final List<String> BASE_EXTENSION_ELEMENTS = List.of(EVENT_ID, ERROR_DECLARATION);
+  public static final List<String> OBJECT_EVENT_TYPE_1_2 =
+      List.of(
+          EPC_LIST, ACTION, BIZ_STEP, DISPOSITION, READ_POINT, BIZ_LOCATION, BIZ_TRANSACTION_LIST);
+  public static final List<String> AGGREGATION_ASSOCIATION_EVENT_TYPE_1_2 =
+      List.of(
+          PARENT_ID,
+          CHILD_EPCS,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST);
+
+  public static final List<String> TRANSACTION_EVENT_TYPE_1_2 =
+      List.of(
+          BIZ_TRANSACTION_LIST,
+          PARENT_ID,
+          EPC_LIST,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION);
+  public static final List<String> TRANSFORMATION_EVENT_TYPE_1_2 =
+      List.of(
+          INPUT_EPC_LIST,
+          INPUT_QUANTITY_LIST,
+          OUTPUT_EPC_LIST,
+          OUTPUT_QUANTITY_LIST,
+          TRANSFORMATION_ID,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          ILMD);
+
+  public static final List<String> EXTENSION_ELEMENTS_1_2 =
+      List.of(QUANTITY_LIST, CHILD_QUANTITY_LIST, SOURCE_LIST, DESTINATION_LIST, ILMD);
+  public static final List<String> INNER_EXTENSION_ELEMENTS_1_2 =
+      List.of(SENSOR_ELEMENT_LIST, PERSISTENT_DISPOSITION, CERTIFICATION_INFO);
+  // End of elements and their order in 1.2 XML document
+
+  // Start of elements and their order in 2.0 XML/JSON/JSON-LD document
+  public static final List<String> OMIT_EXTENSION_ELEMENTS_2_0 = List.of(EXTENSION, BASE_EXTENSION);
+
+  public static final List<String> ALL_EPCIS_ELEMENTS_2_0 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          CERTIFICATION_INFO,
+          PARENT_ID,
+          EPC_LIST,
+          CHILD_EPCS,
+          INPUT_EPC_LIST,
+          INPUT_QUANTITY_LIST,
+          OUTPUT_EPC_LIST,
+          OUTPUT_QUANTITY_LIST,
+          TRANSFORMATION_ID,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          QUANTITY_LIST,
+          CHILD_QUANTITY_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          SENSOR_ELEMENT_LIST,
+          PERSISTENT_DISPOSITION,
+          ILMD);
+
+  public static final List<String> OBJECT_EVENT_TYPE_2_0 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          CERTIFICATION_INFO,
+          EPC_LIST,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          QUANTITY_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          SENSOR_ELEMENT_LIST,
+          PERSISTENT_DISPOSITION,
+          ILMD);
+
+  public static final List<String> AGGREGATION_ASSOCIATION_EVENT_TYPE_2_0 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          CERTIFICATION_INFO,
+          PARENT_ID,
+          CHILD_EPCS,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          CHILD_QUANTITY_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          SENSOR_ELEMENT_LIST,
+          PERSISTENT_DISPOSITION);
+
+  public static final List<String> TRANSACTION_EVENT_TYPE_2_0 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          CERTIFICATION_INFO,
+          BIZ_TRANSACTION_LIST,
+          PARENT_ID,
+          EPC_LIST,
+          ACTION,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          QUANTITY_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          SENSOR_ELEMENT_LIST);
+
+  public static final List<String> TRANSFORMATION_EVENT_2_0 =
+      List.of(
+          EVENT_TIME,
+          RECORD_TIME,
+          EVENT_TIME_ZONE_OFFSET,
+          EVENT_ID,
+          ERROR_DECLARATION,
+          CERTIFICATION_INFO,
+          INPUT_EPC_LIST,
+          INPUT_QUANTITY_LIST,
+          OUTPUT_EPC_LIST,
+          OUTPUT_QUANTITY_LIST,
+          TRANSFORMATION_ID,
+          BIZ_STEP,
+          DISPOSITION,
+          READ_POINT,
+          BIZ_LOCATION,
+          BIZ_TRANSACTION_LIST,
+          SOURCE_LIST,
+          DESTINATION_LIST,
+          SENSOR_ELEMENT_LIST,
+          PERSISTENT_DISPOSITION,
+          ILMD);
+
+  // End of elements and their order in 2.0 XML/JSON/JSON-LD document
+
 }
