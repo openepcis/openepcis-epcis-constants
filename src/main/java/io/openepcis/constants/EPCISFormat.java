@@ -23,13 +23,13 @@ public enum EPCISFormat {
    *     application/xml.
    * @return format returned based on the provided format ex: xml or ld+json.
    */
-  public static String fromString(final String format) {
+  public static EPCISFormat fromString(final String format) {
     final String convertedFormat = !StringUtils.isBlank(format) ? format.toLowerCase() : "";
 
     if (convertedFormat.contains("xml")) {
-      return XML.getFormat();
+      return XML;
     } else if (convertedFormat.contains("json")) {
-      return JSON_LD.getFormat();
+      return JSON_LD;
     } else {
       throw new IllegalArgumentException(
           "Provided format is invalid, please check and try again : " + format);
@@ -44,7 +44,7 @@ public enum EPCISFormat {
    * @return output format returned based on the provided format ex: application/xml,
    *     application/ld+json.
    */
-  public static String getMediaType(final String format) {
+  public String getMediaType(final String format) {
     final String convertedFormat = !StringUtils.isBlank(format) ? format.toLowerCase() : "";
 
     if (convertedFormat.contains("xml")) {
