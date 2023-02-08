@@ -174,42 +174,40 @@ public class EPCIS {
   public static final String BIZ_STEP_WEBURI_PREFIX = "BizStep-";
   public static final String DISP_WEBURI_PREFIX = "Disp-";
   public static final String BIZ_TRANSACTION_WEBURI_PREFIX = "BTT-";
-  public static final String SOURCE_DESTINATION_WEBURI_PREFIX = "SDT-";
-  public static final String ERROR_REASON_WEBURI_PREFIX = "BTT-";
+  public static final String SRC_DEST_WEBURI_PREFIX = "SDT-";
+  public static final String ERROR_REASON_WEBURI_PREFIX = "ER-";
 
   public static final String DEFAULT_VOCABULARY_URN_PREFIX = "urn:epcglobal:cbv:";
   public static final String BIZ_STEP_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "bizstep:";
   public static final String DISPOSITION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "disp:";
   public static final String BIZ_TRANSACTION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "btt:";
-  public static final String SOURCE_DESTINATION_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "sdt:";
+  public static final String SRC_DEST_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "sdt:";
   public static final String ERROR_REASON_URN_PREFIX = DEFAULT_VOCABULARY_URN_PREFIX + "er:";
 
   // GS1 Curie vocabulary prefix
   public static final String DEFAULT_CURIE_PREFIX = "cbv:";
-  private static final String BIZ_STEP_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + BIZ_STEP_WEBURI_PREFIX;
-  private static final String DISPOSITION_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + DISP_WEBURI_PREFIX;
-  private static final String BIZ_TRANSACTION_CURIE_PREFIX =
+  public static final String BIZ_STEP_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + BIZ_STEP_WEBURI_PREFIX;
+  public static final String DISPOSITION_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + DISP_WEBURI_PREFIX;
+  public static final String BIZ_TRANSACTION_CURIE_PREFIX =
       DEFAULT_CURIE_PREFIX + BIZ_TRANSACTION_WEBURI_PREFIX;
-  private static final String SRC_DEST_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "SDT-";
-  private static final String ERR_REASON_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "ER-";
+  public static final String SRC_DEST_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "SDT-";
+  public static final String ERR_REASON_CURIE_PREFIX = DEFAULT_CURIE_PREFIX + "ER-";
 
   // GS1 WebURI/DigitalLink vocabulary prefix
-  private static final String BIZ_STEP_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
-  private static final String DISPOSITION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + DISP_WEBURI_PREFIX;
-  private static final String BIZ_TRANSACTION_WEBURI_CBV_PREFIX =
+  public static final String BIZ_STEP_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
+  public static final String DISPOSITION_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + DISP_WEBURI_PREFIX;
+  public static final String BIZ_TRANSACTION_WEBURI_CBV_PREFIX =
       GS1_CBV_DOMAIN + BIZ_TRANSACTION_WEBURI_PREFIX;
-  private static final String SRC_DEST_WEBURI_CBV_PREFIX =
-      GS1_CBV_DOMAIN + SOURCE_DESTINATION_WEBURI_PREFIX;
-  private static final String ERR_REASON_WEBURI_CBV_PREFIX =
+  public static final String SRC_DEST_WEBURI_CBV_PREFIX = GS1_CBV_DOMAIN + SRC_DEST_WEBURI_PREFIX;
+  public static final String ERR_REASON_WEBURI_CBV_PREFIX =
       GS1_CBV_DOMAIN + ERROR_REASON_WEBURI_PREFIX;
 
-  private static final String BIZ_STEP_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
-  private static final String DISPOSITION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + DISP_WEBURI_PREFIX;
-  private static final String BIZ_TRANSACTION_WEBURI_VOC_PREFIX =
+  public static final String BIZ_STEP_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + BIZ_STEP_WEBURI_PREFIX;
+  public static final String DISPOSITION_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + DISP_WEBURI_PREFIX;
+  public static final String BIZ_TRANSACTION_WEBURI_VOC_PREFIX =
       GS1_VOC_DOMAIN + BIZ_TRANSACTION_WEBURI_PREFIX;
-  private static final String SRC_DEST_WEBURI_VOC_PREFIX =
-      GS1_VOC_DOMAIN + SOURCE_DESTINATION_WEBURI_PREFIX;
-  private static final String ERR_REASON_WEBURI_VOC_PREFIX =
+  public static final String SRC_DEST_WEBURI_VOC_PREFIX = GS1_VOC_DOMAIN + SRC_DEST_WEBURI_PREFIX;
+  public static final String ERR_REASON_WEBURI_VOC_PREFIX =
       GS1_VOC_DOMAIN + ERROR_REASON_WEBURI_PREFIX;
 
   // Start of elements and their order in 1.2 XML document
