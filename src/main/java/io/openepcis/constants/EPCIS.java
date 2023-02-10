@@ -142,7 +142,7 @@ public class EPCIS {
   public static final String EPCIS = "epcis";
   public static final String EPCIS_LOCALNAME = "epcis:";
   public static final String CBV_MDA = "cbvmda";
-  public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda:";
+  public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
   public static final String SCHEMA_VERSION = "schemaVersion";
