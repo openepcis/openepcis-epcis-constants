@@ -51,4 +51,13 @@ public enum EPCISVersion {
     }
     return Optional.empty();
   }
+
+  /**
+   * Method to get the default GS1 EPCIS context url
+   *
+   * @return returns the default GS1 EPCIS standard specification url
+   */
+  public static String getDefaultJSONContext() {
+    return "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld";
+  }
 }

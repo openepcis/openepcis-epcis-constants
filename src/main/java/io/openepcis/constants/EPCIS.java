@@ -129,14 +129,12 @@ public class EPCIS {
 
   // GS1 specific info
   public static final String CONTEXT = "@context";
-  public static final String DEFAULT_CONTEXT =
-      "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld";
   public static final String EPCIS_DOCUMENT = "EPCISDocument";
   public static final String DOCUMENT = "document";
   public static final String EPCIS_DOCUMENT_WITH_NAMESPACE = "epcis:EPCISDocument";
-  public static final String EPCIS_BODY_IN_UPPER_CASE = "EPCISBody";
+  public static final String EPCIS_BODY_IN_CAMEL_CASE = "EPCISBody";
   public static final String EPCIS_BODY_IN_LOWER_CASE = "epcisBody";
-  public static final String EVENT_LIST_IN_UPPER_CASE = "EventList";
+  public static final String EVENT_LIST_IN_CAMEL_CASE = "EventList";
   public static final String EVENT_LIST_IN_LOWER_CASE = "eventList";
   public static final String GS1_PREFIX = "gs1:";
   public static final String EPCIS = "epcis";
@@ -149,15 +147,9 @@ public class EPCIS {
   public static final String CREATION_DATE = "creationDate";
   public static final String XSI = "xsi";
   public static final String XML_SCHEMA_INSTANCE = "http://www.w3.org/2001/XMLSchema-instance";
-  public static final String XML_FORMAT = "xml";
-  public static final String JSON_FORMAT = "json";
-  public static final String JSON_LD_FORMAT = "json-ld";
-  public static final String APPLICATION_XML = "application/xml";
-  public static final String APPLICATION_JSON = "application/json";
-  public static final String APPLICATION_JSON_LD = "application/ld+json";
   public static final String EXCEPTION_MESSAGE = "\nException : ";
   public static final List<String> EPCIS_HEADER_ELEMENTS =
-      List.of(EPCIS_DOCUMENT, EPCIS_BODY_IN_UPPER_CASE, EVENT_LIST_IN_UPPER_CASE);
+      List.of(EPCIS_DOCUMENT, EPCIS_BODY_IN_CAMEL_CASE, EVENT_LIST_IN_CAMEL_CASE);
 
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
