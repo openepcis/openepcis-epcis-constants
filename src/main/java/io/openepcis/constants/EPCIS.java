@@ -132,10 +132,10 @@ public class EPCIS {
   public static final String EPCIS_DOCUMENT = "EPCISDocument";
   public static final String DOCUMENT = "document";
   public static final String EPCIS_DOCUMENT_WITH_NAMESPACE = "epcis:EPCISDocument";
-  public static final String EPCIS_BODY_IN_CAMEL_CASE = "EPCISBody";
-  public static final String EPCIS_BODY_IN_LOWER_CASE = "epcisBody";
-  public static final String EVENT_LIST_IN_CAMEL_CASE = "EventList";
-  public static final String EVENT_LIST_IN_LOWER_CASE = "eventList";
+  public static final String EPCIS_BODY = "EPCISBody";
+  public static final String EPCIS_BODY_IN_CAMEL_CASE = "epcisBody";
+  public static final String EVENT_LIST = "EventList";
+  public static final String EVENT_LIST_IN_CAMEL_CASE = "eventList";
   public static final String GS1_PREFIX = "gs1:";
   public static final String EPCIS = "epcis";
   public static final String EPCIS_LOCALNAME = "epcis:";
@@ -149,7 +149,7 @@ public class EPCIS {
   public static final String XML_SCHEMA_INSTANCE = "http://www.w3.org/2001/XMLSchema-instance";
   public static final String EXCEPTION_MESSAGE = "\nException : ";
   public static final List<String> EPCIS_HEADER_ELEMENTS =
-      List.of(EPCIS_DOCUMENT, EPCIS_BODY_IN_CAMEL_CASE, EVENT_LIST_IN_CAMEL_CASE);
+      List.of(EPCIS_DOCUMENT, EPCIS_BODY, EVENT_LIST);
 
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
