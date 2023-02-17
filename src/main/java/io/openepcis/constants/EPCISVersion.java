@@ -56,7 +56,7 @@ public enum EPCISVersion {
    *
    * @param s input version provided by user ex: 2.0, 1.2, 2.0.0, 1.2.0.
    * @return EPCISVersion returned based on the provided version or schemaVersion string ex:
-   *     VERSION_1_2_0 or VERSION_2_2_0.
+   *     VERSION_1_2_0 or VERSION_2_0_0.
    */
   public static Optional<EPCISVersion> fromString(final String s) {
     for (EPCISVersion v : values()) {
