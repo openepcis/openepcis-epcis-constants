@@ -141,16 +141,17 @@ public class EPCIS {
   public static final String CAPTURE = "capture";
   public static final String QUERY = "query";
 
+  // EPCISQueryDocument info
   public static final String EPCIS_QUERY_LOCALNAME = "epcisq:";
-
   public static final String EPCIS_QUERY_DOCUMENT = "EPCISQueryDocument";
-
   public static final String EPCIS_QUERY_DOCUMENT_WITH_PREFIX =
       EPCIS_QUERY_LOCALNAME + "EPCISQueryDocument";
-
   public static final String QUERY_RESULTS = "QueryResults";
-
-  public static final String RESULTS_BODY = "resultsBody";
+  public static final String QUERY_RESULTS_IN_CAMEL_CASE = "queryResults";
+  public static final String RESULTS_BODY = "ResultsBody";
+  public static final String RESULTS_BODY_IN_CAMEL_CASE = "resultsBody";
+  public static final String SUBSCRIPTION_ID = "subscriptionID";
+  public static final String QUERY_NAME = "queryName";
 
   // GS1 specific info
   public static final String CONTEXT = "@context";
