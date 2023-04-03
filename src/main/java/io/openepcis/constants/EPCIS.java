@@ -136,6 +136,7 @@ public class EPCIS {
   public static final String URN = "urn";
   public static final String WEBURI = "WebURI";
   public static final String PATH_DELIMITER = "/";
+  public static final String SCHEMA_LOCATION = "schemaLocation";
   public static final String SCHEMA_VERSION_1_2 = "1.2";
   public static final String SCHEMA_VERSION_2_0 = "2.0";
   public static final String CAPTURE = "capture";
@@ -144,7 +145,7 @@ public class EPCIS {
   // EPCISQueryDocument info
   public static final String EPCIS_QUERY_LOCALNAME = "epcisq:";
   public static final String EPCIS_QUERY_DOCUMENT = "EPCISQueryDocument";
-  public static final String EPCIS_QUERY_DOCUMENT_WITH_PREFIX =
+  public static final String EPCIS_QUERY_DOCUMENT_WITH_NAMESPACE =
       EPCIS_QUERY_LOCALNAME + "EPCISQueryDocument";
   public static final String QUERY_RESULTS = "QueryResults";
   public static final String QUERY_RESULTS_IN_CAMEL_CASE = "queryResults";
@@ -164,20 +165,25 @@ public class EPCIS {
   public static final String EPCIS_BODY_IN_CAMEL_CASE = "epcisBody";
   public static final String EVENT_LIST = "EventList";
   public static final String EVENT_LIST_IN_CAMEL_CASE = "eventList";
+  public static final String GS1 = "gs1";
   public static final String GS1_PREFIX = "gs1:";
   public static final String EPCIS = "epcis";
+  public static final String EPCIS_QUERY = "epcisq";
+  public static final String CBV = "cbv";
   public static final String CBV_MDA = "cbvmda";
   public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
 
   public static final String EPCIS_QUERY_1_2_XMLNS = "urn:epcglobal:epcis-query:xsd:1";
-
   public static final String EPCIS_QUERY_2_0_XMLNS = "urn:epcglobal:epcis-query:xsd:2";
   public static final String SCHEMA_VERSION = "schemaVersion";
   public static final String CREATION_DATE = "creationDate";
   public static final String XSI = "xsi";
   public static final String XML_SCHEMA_INSTANCE = "http://www.w3.org/2001/XMLSchema-instance";
+  public static final String STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX = "sbdh";
+  public static final String STANDARD_BUSINESS_DOCUMENT_HEADER =
+      "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
   public static final String EXCEPTION_MESSAGE = "\nException : ";
   public static final List<String> EPCIS_HEADER_ELEMENTS =
       List.of(
@@ -187,6 +193,19 @@ public class EPCIS {
           RESULTS_BODY,
           QUERY_RESULTS,
           EVENT_LIST);
+  public static final List<String> PROTECTED_TERMS_OF_CONTEXT =
+      List.of(
+          EPCIS,
+          CBV,
+          "vtype",
+          CBV_MDA,
+          "xsd",
+          "dcterms",
+          GS1,
+          XSI,
+          SCHEMA_LOCATION,
+          EPCIS_QUERY,
+          STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
 
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
