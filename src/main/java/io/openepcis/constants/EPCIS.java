@@ -207,6 +207,9 @@ public class EPCIS {
           EPCIS_QUERY,
           STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
 
+  public static final List<String> REQUIRED_DOCUMENT_FIELDS =
+      List.of(CONTEXT, TYPE, SCHEMA_VERSION, CREATION_DATE);
+
   // GS1 URN vocabulary prefix
   public static final String DEFAULT_IDENTIFIER_URN_PREFIX = "urn:epc:";
   public static final String INSTANCE_IDENTIFIER_URN_PREFIX = DEFAULT_IDENTIFIER_URN_PREFIX + "id:";
