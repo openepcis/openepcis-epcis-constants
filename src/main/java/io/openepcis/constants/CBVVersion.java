@@ -20,7 +20,8 @@ import java.util.Optional;
 public enum CBVVersion {
   // shall be in ascending order for min/max comparison
   VERSION_1_2_2("1.2.2"),
-  VERSION_2_0_0("2.0.0");
+  VERSION_2_0_0("2.0.0"),
+  VERSION_2_0_1("2.0.1");
 
   private final String version;
 
