@@ -15,6 +15,7 @@
  */
 package io.openepcis.constants;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 public enum CBVVersion {
@@ -54,4 +55,18 @@ public enum CBVVersion {
     }
     return Optional.empty();
   }
+
+  /**
+   * Method to return respective CBV version based on provided string input version.
+   * If none matches then returns the VERSION_2_0_0
+   *
+   * @param cbvVersionString input version provided by user ex: 2.0.0, 1.2.2.
+   * @return EPCISVersion returned based on the provided version string ex: VERSION_1_2_2 or VERSION_2_0_0.
+   */
+   public static CBVVersion of(final String cbvVersionString){
+     return Arrays.stream(values())
+             .filter(v -> v.version.equals(cbvVersionString))
+             .findFirst()
+             .orElse(CBVVersion.VERSION_2_0_0);
+   }
 }
