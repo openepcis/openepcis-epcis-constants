@@ -24,7 +24,6 @@
         <groupId>io.openepcis</groupId>
         <artifactId>openepcis-bom</artifactId>
         <version>1.0.0-SNAPSHOT</version>
-        <relativePath></relativePath>
     </parent>
 
     <artifactId>openepcis-epcis-constants</artifactId>
@@ -85,5 +84,18 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <!-- sonatype releases -->
+        <repository>
+            <id>sonatype-releases</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/releases</url>
+        </repository>
+        <!-- sonatype snapshots -->
+        <repository>
+            <id>sonatype-staging</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </repository>
+    </repositories>
 
 </project>
