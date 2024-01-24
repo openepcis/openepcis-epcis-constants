@@ -191,6 +191,7 @@ public class EPCIS {
           EPCIS_QUERY_DOCUMENT,
           EPCIS_BODY,
           RESULTS_BODY,
+          RESULTS_BODY_IN_CAMEL_CASE,
           QUERY_RESULTS,
           EVENT_LIST);
   public static final List<String> PROTECTED_TERMS_OF_CONTEXT =
