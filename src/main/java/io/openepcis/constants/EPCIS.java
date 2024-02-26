@@ -16,6 +16,8 @@
 package io.openepcis.constants;
 
 import java.util.List;
+import java.util.Map;
+
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -465,5 +467,15 @@ public class EPCIS {
           ILMD);
 
   // End of elements and their order in 2.0 XML/JSON/JSON-LD document
+
+  //Default Namespaces related to EPCIS
+  public static final Map<String, Object> EPCIS_DEFAULT_NAMESPACES =  Map.of(
+          EPCIS, EPCIS_2_0_XMLNS,
+          EPCIS_QUERY, EPCIS_QUERY_2_0_XMLNS,
+          "sbdh", STANDARD_BUSINESS_DOCUMENT_HEADER,
+          CBV_MDA, CBV_MDA_URN,
+          "gs1", GS1_VOC_DOMAIN,
+          "dcterms", "http://purl.org/dc/terms/"
+  );
 
 }
