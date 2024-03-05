@@ -15,11 +15,11 @@
  */
 package io.openepcis.constants;
 
-import java.util.List;
-import java.util.Map;
-
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
+import java.util.Map;
 
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class EPCIS {
@@ -28,6 +28,8 @@ public class EPCIS {
   public static final String GS1_IDENTIFIER_DOMAIN = "https://id.gs1.org";
   public static final String GS1_CBV_DOMAIN = "https://ref.gs1.org/cbv/";
   public static final String GS1_VOC_DOMAIN = "https://gs1.org/voc/";
+  public static final String GS1_EPCIS_DOMAIN = "https://ref.gs1.org/epcis/";
+  public static final String DC_TERMS_DOMAIN = "http://purl.org/dc/terms/";
 
   // Basic event info
   public static final String TYPE = "type";
@@ -168,6 +170,8 @@ public class EPCIS {
   public static final String EVENT_LIST = "EventList";
   public static final String EVENT_LIST_IN_CAMEL_CASE = "eventList";
   public static final String GS1 = "gs1";
+
+  public static final String DCTERMS = "dcterms";
   public static final String GS1_PREFIX = "gs1:";
   public static final String EPCIS = "epcis";
   public static final String EPCIS_QUERY = "epcisq";
@@ -188,27 +192,27 @@ public class EPCIS {
       "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
   public static final String EXCEPTION_MESSAGE = "\nException : ";
   public static final List<String> EPCIS_HEADER_ELEMENTS =
-      List.of(
-          EPCIS_DOCUMENT,
-          EPCIS_QUERY_DOCUMENT,
-          EPCIS_BODY,
-          RESULTS_BODY,
-          RESULTS_BODY_IN_CAMEL_CASE,
-          QUERY_RESULTS,
-          EVENT_LIST);
+          List.of(
+                  EPCIS_DOCUMENT,
+                  EPCIS_QUERY_DOCUMENT,
+                  EPCIS_BODY,
+                  RESULTS_BODY,
+                  RESULTS_BODY_IN_CAMEL_CASE,
+                  QUERY_RESULTS,
+                  EVENT_LIST);
   public static final List<String> PROTECTED_TERMS_OF_CONTEXT =
-      List.of(
-          EPCIS,
-          CBV,
-          "vtype",
-          CBV_MDA,
-          "xsd",
-          "dcterms",
-          GS1,
-          XSI,
-          SCHEMA_LOCATION,
-          EPCIS_QUERY,
-          STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
+          List.of(
+                  EPCIS,
+                  CBV,
+                  "vtype",
+                  CBV_MDA,
+                  "xsd",
+                  DCTERMS,
+                  GS1,
+                  XSI,
+                  SCHEMA_LOCATION,
+                  EPCIS_QUERY,
+                  STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
 
   public static final List<String> REQUIRED_DOCUMENT_FIELDS =
       List.of(CONTEXT, TYPE, SCHEMA_VERSION, CREATION_DATE);
@@ -469,13 +473,24 @@ public class EPCIS {
   // End of elements and their order in 2.0 XML/JSON/JSON-LD document
 
   //Default Namespaces related to EPCIS
-  public static final Map<String, Object> EPCIS_DEFAULT_NAMESPACES =  Map.of(
+  public static final Map<String, Object> EPCIS_DEFAULT_NAMESPACES = Map.of(
           EPCIS, EPCIS_2_0_XMLNS,
           EPCIS_QUERY, EPCIS_QUERY_2_0_XMLNS,
-          "sbdh", STANDARD_BUSINESS_DOCUMENT_HEADER,
+          STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX, STANDARD_BUSINESS_DOCUMENT_HEADER,
           CBV_MDA, CBV_MDA_URN,
-          "gs1", GS1_VOC_DOMAIN,
-          "dcterms", "http://purl.org/dc/terms/"
+          GS1, GS1_VOC_DOMAIN,
+          DCTERMS, DC_TERMS_DOMAIN,
+          CBV, GS1_CBV_DOMAIN
   );
+
+  public static final List<String> PROTECTED_NAMESPACE_OF_CONTEXT =
+          List.of(
+                  DEFAULT_VOCABULARY_URN_PREFIX,
+                  CBV_MDA_URN,
+                  GS1_EPCIS_DOMAIN,
+                  GS1_CBV_DOMAIN,
+                  GS1_VOC_DOMAIN,
+                  DC_TERMS_DOMAIN
+          );
 
 }
