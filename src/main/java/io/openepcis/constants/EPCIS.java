@@ -30,8 +30,12 @@ public class EPCIS {
   public static final String GS1_VOC_DOMAIN = "https://gs1.org/voc/";
   public static final String GS1_EPCIS_DOMAIN = "https://ref.gs1.org/epcis/";
   public static final String DC_TERMS_DOMAIN = "http://purl.org/dc/terms/";
+  public static final String GS1_EGYPT_CUSTOM_CONTEXT = "https://raw.githubusercontent.com/Aravinda93/gs1egypt-custom-context/refs/heads/main/custom-epcis-context.jsonld";
+  public static final String GS1_EGYPT_CUSTOM_PREFIX = "gs1egypthc";
+  public static final String GS1_EGYPT_CUSTOM_NAMESPACES = "http://epcis.gs1eg.org/hc/ns";
 
   // Basic event info
+  public static final String AT_ID = "@id";
   public static final String TYPE = "type";
   public static final String EVENT_TYPE = "eventType";
   public static final String OBJECT_EVENT = "ObjectEvent";
