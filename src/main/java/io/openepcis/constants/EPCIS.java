@@ -32,6 +32,7 @@ public class EPCIS {
   public static final String DC_TERMS_DOMAIN = "http://purl.org/dc/terms/";
 
   // Basic event info
+  public static final String AT_ID = "@id";
   public static final String TYPE = "type";
   public static final String EVENT_TYPE = "eventType";
   public static final String OBJECT_EVENT = "ObjectEvent";
