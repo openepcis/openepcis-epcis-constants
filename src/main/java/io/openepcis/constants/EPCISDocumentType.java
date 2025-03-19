@@ -27,6 +27,7 @@ public enum EPCISDocumentType {
 
   /**
    * return EPCISDocumentType from String, defaults to CAPTURE
+   *
    * @param s EPCISDocumentType as String
    * @return matching EPCISDocumentType
    */
