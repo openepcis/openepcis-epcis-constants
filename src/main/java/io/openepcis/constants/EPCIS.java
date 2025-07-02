@@ -26,7 +26,7 @@ public class EPCIS {
   // GS1 or EPCIS standard URLs and namespaces
   public static final String GS1_IDENTIFIER_DOMAIN = "https://id.gs1.org";
   public static final String GS1_CBV_DOMAIN = "https://ref.gs1.org/cbv/";
-  public static final String GS1_VOC_DOMAIN = "https://gs1.org/voc/";
+  public static final String GS1_VOC_DOMAIN = "https://ref.gs1.org/voc/";
   public static final String GS1_EPCIS_DOMAIN = "https://ref.gs1.org/epcis/";
   public static final String DC_TERMS_DOMAIN = "http://purl.org/dc/terms/";
   public static final String RDFS_DOMAIN = "http://www.w3.org/2000/01/rdf-schema#";
