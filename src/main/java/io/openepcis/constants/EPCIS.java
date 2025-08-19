@@ -32,6 +32,7 @@ public class EPCIS {
   public static final String RDFS_DOMAIN = "http://www.w3.org/2000/01/rdf-schema#";
   public static final String OWL_DOMAIN = "http://www.w3.org/2002/07/owl#";
   public static final String XSD_DOMAIN = "http://www.w3.org/2001/XMLSchema#";
+  public static final String XSD_DOMAIN2 = "http://www.w3.org/2001/XMLSchema";
   public static final String CBV_MDA_URN = "urn:epcglobal:cbv:mda";
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
@@ -227,6 +228,7 @@ public class EPCIS {
           EPCIS_2_0_XMLNS,
           CBV_MDA_URN,
           XSD_DOMAIN,
+          XSD_DOMAIN2,
           DC_TERMS_DOMAIN,
           GS1_VOC_DOMAIN,
           XML_SCHEMA_INSTANCE,
