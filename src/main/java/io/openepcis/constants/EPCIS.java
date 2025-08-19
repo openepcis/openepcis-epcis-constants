@@ -56,6 +56,7 @@ public class EPCIS {
   public static final String STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX = "sbdh";
 
   // Basic event info
+  public static final String EPCIS_HEADER = "EPCISHeader";
   public static final String AT_ID = "@id";
   public static final String TYPE = "type";
   public static final String EVENT_TYPE = "eventType";
@@ -220,6 +221,20 @@ public class EPCIS {
           SCHEMA_LOCATION,
           EPCIS_QUERY,
           STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
+
+  public static final List<String> PROTECTED_URLS_OF_CONTEXT = List.of(
+          EPCIS_1_2_XMLNS,
+          EPCIS_2_0_XMLNS,
+          CBV_MDA_URN,
+          XSD_DOMAIN,
+          DC_TERMS_DOMAIN,
+          GS1_VOC_DOMAIN,
+          XML_SCHEMA_INSTANCE,
+          GS1_EPCIS_DOMAIN,
+          EPCIS_QUERY_1_2_XMLNS,
+          EPCIS_QUERY_2_0_XMLNS,
+          STANDARD_BUSINESS_DOCUMENT_HEADER
+  );
 
   public static final List<String> REQUIRED_DOCUMENT_FIELDS =
       List.of(CONTEXT, TYPE, SCHEMA_VERSION, CREATION_DATE);
