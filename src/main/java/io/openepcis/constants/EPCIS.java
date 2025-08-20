@@ -209,34 +209,6 @@ public class EPCIS {
           RESULTS_BODY_IN_CAMEL_CASE,
           QUERY_RESULTS,
           EVENT_LIST);
-  public static final List<String> PROTECTED_TERMS_OF_CONTEXT =
-      List.of(
-          EPCIS,
-          CBV,
-          "vtype",
-          CBV_MDA,
-          XSD,
-          DCTERMS,
-          GS1,
-          XSI,
-          SCHEMA_LOCATION,
-          EPCIS_QUERY,
-          STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
-
-  public static final List<String> PROTECTED_URLS_OF_CONTEXT = List.of(
-          EPCIS_1_2_XMLNS,
-          EPCIS_2_0_XMLNS,
-          CBV_MDA_URN,
-          XSD_DOMAIN,
-          XSD_DOMAIN2,
-          DC_TERMS_DOMAIN,
-          GS1_VOC_DOMAIN,
-          XML_SCHEMA_INSTANCE,
-          GS1_EPCIS_DOMAIN,
-          EPCIS_QUERY_1_2_XMLNS,
-          EPCIS_QUERY_2_0_XMLNS,
-          STANDARD_BUSINESS_DOCUMENT_HEADER
-  );
 
   public static final List<String> REQUIRED_DOCUMENT_FIELDS =
       List.of(CONTEXT, TYPE, SCHEMA_VERSION, CREATION_DATE);
@@ -494,6 +466,38 @@ public class EPCIS {
   // End of elements and their order in 2.0 XML/JSON/JSON-LD document
 
   // Default Namespaces related to EPCIS
+  public static final List<String> PROTECTED_TERMS_OF_CONTEXT =
+          List.of(
+                  EPCIS,
+                  CBV,
+                  "vtype",
+                  CBV_MDA,
+                  XSD,
+                  DCTERMS,
+                  GS1,
+                  XSI,
+                  SCHEMA_LOCATION,
+                  EPCIS_QUERY,
+                  STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX);
+
+  public static final List<String> PROTECTED_NAMESPACE_URIS = List.of(
+          EPCIS_1_2_XMLNS,
+          EPCIS_2_0_XMLNS,
+          CBV_MDA_URN,
+          XSD_DOMAIN,
+          XSD_DOMAIN2,
+          DC_TERMS_DOMAIN,
+          GS1_VOC_DOMAIN,
+          XML_SCHEMA_INSTANCE,
+          GS1_EPCIS_DOMAIN,
+          EPCIS_QUERY_1_2_XMLNS,
+          EPCIS_QUERY_2_0_XMLNS,
+          STANDARD_BUSINESS_DOCUMENT_HEADER,
+          GS1_CBV_DOMAIN,
+          RDFS_DOMAIN,
+          OWL_DOMAIN,
+          DEFAULT_VOCABULARY_URN_PREFIX
+  );
   public static final Map<String, Object> EPCIS_DEFAULT_NAMESPACES =
       Map.of(
           EPCIS, EPCIS_2_0_XMLNS,
