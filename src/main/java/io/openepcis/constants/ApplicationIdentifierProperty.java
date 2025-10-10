@@ -15,6 +15,7 @@ public enum ApplicationIdentifierProperty {
     GLN("414", "globalLocationNumber", "gln"),
     SERIAL("21", "hasSerialNumber", "ser"),
     LOT("10", "hasBatchLotNumber", "lot"),
+    CPV("22", "consumerProductVariant", "cpv"),
 
     PRODUCTION_DATE("11", "productionDate", null),
     DUE_DATE("12", "dueDate", null),
@@ -23,7 +24,6 @@ public enum ApplicationIdentifierProperty {
     SELL_BY_DATE("16", "sellByDate", null),
     EXPIRATION_DATE("17", "expirationDate", "exp"),
 
-    CPV("22", "cpv", "cpv"),
     GDTI("253", "gdti", "gdti"),
     GLN_EXTENSION("254", "glnx", "glnx"),
     GCN("255", "gcn", "gcn"),
