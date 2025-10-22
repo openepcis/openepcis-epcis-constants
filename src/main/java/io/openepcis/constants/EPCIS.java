@@ -66,6 +66,7 @@ public class EPCIS {
   public static final String TRANSACTION_EVENT = "TransactionEvent";
   public static final String TRANSFORMATION_EVENT = "TransformationEvent";
   public static final String ASSOCIATION_EVENT = "AssociationEvent";
+  public static final String QUANTITY_EVENT = "QuantityEvent"; // eventType from EPCIS 1.1 - DEPRECATED
   public static final List<String> EPCIS_EVENT_TYPES =
       List.of(
           OBJECT_EVENT,
@@ -168,6 +169,7 @@ public class EPCIS {
   public static final String WEBURI = "WebURI";
   public static final String PATH_DELIMITER = "/";
   public static final String SCHEMA_LOCATION = "schemaLocation";
+  public static final String SCHEMA_VERSION_1_1 = "1.1";
   public static final String SCHEMA_VERSION_1_2 = "1.2";
   public static final String SCHEMA_VERSION_2_0 = "2.0";
   public static final String CAPTURE = "capture";
