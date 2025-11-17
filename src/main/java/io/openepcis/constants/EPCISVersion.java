@@ -18,10 +18,12 @@ package io.openepcis.constants;
 import java.util.Optional;
 
 public enum EPCISVersion {
-  // shall be in ascending order for min/max comparison
-  VERSION_1_1_0("1.1.0", "1.1"),
-  VERSION_1_2_0("1.2.0", "1.2"),
-  VERSION_2_0_0("2.0.0", "2.0");
+    // shall be in ascending order for min/max comparison
+    VERSION_1_1_0("1.1.0", "1.1"),
+    VERSION_1_2_0("1.2.0", "1.2"),
+    VERSION_2_0_0("2.0.0", "2.0"),
+    VERSION_2_0_1("2.0.1", "2.0.1"),
+    VERSION_2_1_0("2.1.0", "2.1.0");
 
   private final String version;
 
