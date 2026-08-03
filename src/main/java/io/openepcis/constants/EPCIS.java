@@ -37,8 +37,7 @@ public class EPCIS {
   public static final String EPCIS_1_2_XMLNS = "urn:epcglobal:epcis:xsd:1";
   public static final String EPCIS_2_0_XMLNS = "urn:epcglobal:epcis:xsd:2";
   public static final String XML_SCHEMA_INSTANCE = "http://www.w3.org/2001/XMLSchema-instance";
-  public static final String STANDARD_BUSINESS_DOCUMENT_HEADER =
-      "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
+  public static final String STANDARD_BUSINESS_DOCUMENT_HEADER = "http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader";
   public static final String EPCIS_QUERY_1_2_XMLNS = "urn:epcglobal:epcis-query:xsd:1";
   public static final String EPCIS_QUERY_2_0_XMLNS = "urn:epcglobal:epcis-query:xsd:2";
 
@@ -49,12 +48,17 @@ public class EPCIS {
   public static final String XSD = "xsd";
   public static final String DCTERMS = "dcterms";
   public static final String GS1_PREFIX = "gs1:";
+  @Deprecated(forRemoval = true)
   public static final String EPCIS = "epcis";
+  public static final String EPCIS_NAMESPACE = "epcis";
   public static final String EPCIS_QUERY = "epcisq";
   public static final String CBV = "cbv";
   public static final String CBV_MDA = "cbvmda";
   public static final String XSI = "xsi";
   public static final String STANDARD_BUSINESS_DOCUMENT_HEADER_PREFIX = "sbdh";
+  public static final String XML_FORMAT = "xml";
+  public static final String JSON_FORMAT = "json";
+  public static final String JSON_LD_FORMAT = "jsonld";
 
   // Basic event info
   public static final String EPCIS_HEADER = "EPCISHeader";
