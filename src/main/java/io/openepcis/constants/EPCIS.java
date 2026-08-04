@@ -50,7 +50,7 @@ public class EPCIS {
   public static final String GS1_PREFIX = "gs1:";
   @Deprecated(forRemoval = true)
   public static final String EPCIS = "epcis";
-  public static final String EPCIS_NAMESPACE = "epcis";
+  public static final String EPCIS_NAMESPACE_PREFIX = "epcis";
   public static final String EPCIS_QUERY = "epcisq";
   public static final String CBV = "cbv";
   public static final String CBV_MDA = "cbvmda";
@@ -202,6 +202,8 @@ public class EPCIS {
   public static final String EPCIS_BODY_IN_CAMEL_CASE = "epcisBody";
   public static final String EVENT_LIST = "EventList";
   public static final String EVENT_LIST_IN_CAMEL_CASE = "eventList";
+  public static final String CAPTURE_EVENT_LIST_PATH = "$.epcisBody.eventList"; // Path of JSON EPCISDocument where event live
+  public static final String QUERY_EVENT_LIST_PATH = "$.epcisBody.queryResults.resultsBody.eventList"; // Path of JSON EPCISQueryDocument where event live
 
   public static final String SCHEMA_VERSION = "schemaVersion";
   public static final String CREATION_DATE = "creationDate";
