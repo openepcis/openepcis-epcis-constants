@@ -17,10 +17,7 @@ package io.openepcis.constants;
 
 import java.util.List;
 import java.util.Map;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
 
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class EPCIS {
 
   // GS1 or EPCIS standard URLs and namespaces
@@ -530,4 +527,9 @@ public class EPCIS {
           XSD_DOMAIN,
           DC_TERMS_DOMAIN,
           DEFAULT_VOCABULARY_URN_PREFIX);
+
+  // Was @NoArgsConstructor(access = PROTECTED): a constants holder must not be
+  // instantiable from outside. Without this the compiler would supply a PUBLIC
+  // default constructor, which is a wider API than before.
+  protected EPCIS() {}
 }
