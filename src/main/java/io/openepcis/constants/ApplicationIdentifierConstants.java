@@ -62,6 +62,20 @@ public class ApplicationIdentifierConstants {
     public static final String LGTIN_AI_BATCH_LOT_PREFIX = "/10/";
     public static final String LGTIN_AI_URN_PREFIX = ":lgtin:";
 
+    // === GMN (8013) ===
+    public static final String GMN_AI_URI_PREFIX = "/8013/";
+
+    // === Party-role GLNs (410, 411, 412, 413, 415) ===
+    // A GLN in a business role rather than as a location or party identity. GS1's Digital
+    // Link grammar admits all five as primary keys, and the resolver description schema
+    // permits them in supportedPrimaryKeys — but EPCIS has no URN form for any of them,
+    // so unlike SGLN (414) and PGLN (417) they are Digital-Link-only.
+    public static final String SHIP_TO_AI_URI_PREFIX = "/410/";
+    public static final String BILL_TO_AI_URI_PREFIX = "/411/";
+    public static final String PURCHASED_FROM_AI_URI_PREFIX = "/412/";
+    public static final String SHIP_FOR_AI_URI_PREFIX = "/413/";
+    public static final String PAY_TO_AI_URI_PREFIX = "/415/";
+
     // === PGLN (417) ===
     public static final String PGLN_AI_URI_PREFIX = "/417/";
     public static final String PGLN_AI_URN_PREFIX = ":pgln:";
