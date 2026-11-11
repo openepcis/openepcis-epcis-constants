@@ -29,6 +29,9 @@ public enum EPCISVersion {
 
   private final String schemaVersion;
 
+  // current default stays 2.0.1 until 2.1 is released
+  public static final EPCISVersion DEFAULT = VERSION_2_0_1;
+
   /**
    * Method to return fully-qualified EPCIS Version used in http headers: GS1-EPCIS-Version,
    * GS1-EPCIS-Min, GS1-EPCIS-Max
