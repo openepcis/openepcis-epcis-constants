@@ -173,6 +173,7 @@ public class EPCIS {
   public static final String SCHEMA_VERSION_1_1 = "1.1";
   public static final String SCHEMA_VERSION_1_2 = "1.2";
   public static final String SCHEMA_VERSION_2_0 = "2.0";
+  public static final String SCHEMA_VERSION_2_1 = "2.1";
   public static final String CAPTURE = "capture";
   public static final String QUERY = "query";
 
